@@ -11,7 +11,6 @@ const CellBlock = ()=>{
         setMoveXBy3, setMoveYBy3, setMoveXBy4, setMoveYBy4,
         setSideBoard} = UseAppContext()
 
-  
 
     const showRefValue =(value)=>{
         checkDistanceAToB()
