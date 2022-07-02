@@ -4,13 +4,9 @@ import { UseAppContext } from "../../context"
 
 
 export const CellData = ({id})=>{
-    const {options1Value1,setOptions1Value1, 
-        token1XPos, token1YPos, token2XPos, token2YPos, 
+    const {token1XPos, token1YPos, token2XPos, token2YPos, 
         token3XPos, token3YPos, token4XPos, token4YPos, 
-       AToB, AToC, AToD, BToC, BToD, CToD, moveXBy1, moveYBy1, 
-       checkDistanceAToB, checkDistanceAToC, checkDistanceAToD, 
-       checkDistanceBToC, checkDistanceBToD, checkDistanceCToD,
-       start} = UseAppContext()
+       AToB, AToC, AToD, BToC, BToD, CToD, start} = UseAppContext()
     const [elementXData, setElementXData] = useState(0);
     const [elementYData, setElementYData] = useState(0);
     const [elementBackground, setElementBackground] = useState("none")
