@@ -6,7 +6,8 @@ import { Object3 } from "./object3";
 import { Object4 } from "./object4";
 import { UseAppContext } from "../../context";
 import CellBlock from "./cellBlock";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaRegWindowClose, FaPowerOff } from "react-icons/fa";
+import { MdOutlineMenu, MdPowerSettingsNew, MdOutlineClose } from "react-icons/md";
 
 const Main = ()=>{
     const {checkDistanceAToB,checkDistanceAToC, checkDistanceAToD, checkDistanceBToC, checkDistanceBToD, checkDistanceCToD,
@@ -15,29 +16,6 @@ const Main = ()=>{
         setMoveXBy3, setMoveYBy3, setMoveXBy4, setMoveYBy4, 
         sideboard, setSideBoard,start, setStart} = UseAppContext()
    
-  
-    const showRefValue =(value)=>{
-        checkDistanceAToB()
-        checkDistanceAToC()
-        checkDistanceAToD()
-
-        checkDistanceBToC()
-        checkDistanceBToD()
-        checkDistanceCToD()
-        const selected = document.querySelector(`#${value}`);
-        
-        setMoveXBy1(selected)
-        setMoveYBy1(selected)
-
-        setMoveXBy2(selected)
-        setMoveYBy2(selected)
-
-        setMoveXBy3(selected)
-        setMoveYBy3(selected)
-
-        setMoveXBy4(selected)
-        setMoveYBy4(selected)
-}
 
 
 const setSideBoardValue =()=>{
@@ -50,12 +28,24 @@ const setSideBoardValue =()=>{
         <Object2 />
         <Object3 />
         <Object4 />
-    <div className="sidebar" onClick={setSideBoardValue}>
-        <FaBars />
+    <div className="menu-btn" onClick={setSideBoardValue} >
+        {sideboard ? 
+        <MdOutlineClose className="menu-icon2" /> :
+        <MdOutlineMenu className="menu-icon1"/>
+        }
+    </div>
+    <div className="toggle-btn" onClick={()=>setStart(!start)} >
+       {!sideboard && 
+       <>
+        {start ?
+        <MdPowerSettingsNew className="toggle-icon1"/> :
+        <MdPowerSettingsNew className="toggle-icon2"/>}
+      </>
+       }
     </div>
     <aside className="sideboard" style={sideboard? {transform:"translateX(0%)", width:"15rem", transition:"all 0.5s"} : 
     {transform: "translateX(100%)", width:"15rem", transition:"all 2s"}}>
-        <h3>Details of Relative Distance</h3>
+        <div className="sideboard-heading">Relative Distances</div>
         <article>
             <strong>A to B</strong>
             <div>Direct distance: {AToB.main}</div>
@@ -93,11 +83,11 @@ const setSideBoardValue =()=>{
             <div>Distance on X-Axis: {CToD.x}</div>
             <div>Distance on Y-Axis: {CToD.y}</div>
         </article><br/>
-    <button 
+    {/* <button 
     style={{position:"absolute"}} className="toggle-regions"
      onClick={()=>setStart(!start)}
      >{start ? `Hide Regions`: `Show Regions`}
-     </button>
+     </button> */}
     </aside>
     <div className="footer"></div>
     </div>
