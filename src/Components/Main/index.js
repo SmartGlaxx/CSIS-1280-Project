@@ -4,6 +4,7 @@ import { Object1 } from "./object1";
 import { Object2 } from "./object2";
 import { Object3 } from "./object3";
 import { Object4 } from "./object4";
+import { House1, House2, House3, House4, House5, House6, House7, House8, House9, House10, House11 } from "./houses";
 import { UseAppContext } from "../../context";
 import CellBlock from "./cellBlock";
 import { FaBars, FaRegWindowClose, FaPowerOff } from "react-icons/fa";
@@ -28,6 +29,17 @@ const setSideBoardValue =()=>{
         <Object2 />
         <Object3 />
         <Object4 />
+        <House1 />
+        <House2 />
+        <House3 />
+        <House4 />
+        <House5 />
+        <House6 />
+        <House7 />
+        <House8 />
+        <House9 />
+        <House10 />
+        <House11 />
     <div className="menu-btn" onClick={setSideBoardValue} >
         {sideboard ? 
         <MdOutlineClose className="menu-icon2" /> :
@@ -83,6 +95,11 @@ const setSideBoardValue =()=>{
             <div>Distance on X-Axis: {CToD.x}</div>
             <div>Distance on Y-Axis: {CToD.y}</div>
         </article><br/>
+        <div className="credit">
+        House Vectors by <a href="https://www.vecteezy.com/free-vector/house"><em>Vecteezy</em></a>
+        <br/>
+        Designed by <a href="https://www.smartegbuchulem.co"><em>Smart Egbuchulem</em></a>
+        </div>
     {/* <button 
     style={{position:"absolute"}} className="toggle-regions"
      onClick={()=>setStart(!start)}
