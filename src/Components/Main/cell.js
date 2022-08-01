@@ -47,7 +47,7 @@ export const CellData = ({id})=>{
                 setElementBackground("blue")
                 break
             case totalFromD:
-                setElementBackground("red")
+                setElementBackground("green")
                 break
         }
     }

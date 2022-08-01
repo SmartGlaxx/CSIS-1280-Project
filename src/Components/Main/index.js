@@ -4,7 +4,10 @@ import { Object1 } from "./object1";
 import { Object2 } from "./object2";
 import { Object3 } from "./object3";
 import { Object4 } from "./object4";
-import { House1, House2, House3, House4, House5, House6, House7, House8, House9, House10, House11 } from "./houses";
+import { House1, House2, House3, House4, House5, House6, House7, House8, House9, House10,
+    House11, House12, House13, House14, House15, House16, House17, House18, House19, House20, 
+     House21, House22, House23, House24, House25
+    } from "./houses";
 import { UseAppContext } from "../../context";
 import CellBlock from "./cellBlock";
 import { FaBars, FaRegWindowClose, FaPowerOff } from "react-icons/fa";
@@ -40,6 +43,20 @@ const setSideBoardValue =()=>{
         <House9 />
         <House10 />
         <House11 />
+        <House12 />
+        <House13 />
+        <House14 />
+        <House15 />
+        <House16 />
+        <House17 />
+        <House18 />
+        <House19 />
+        <House20 />
+        <House21 />
+        <House22 />
+        <House23 />
+        <House24 />
+        <House25 />
     <div className="menu-btn" onClick={setSideBoardValue} >
         {sideboard ? 
         <MdOutlineClose className="menu-icon2" /> :
@@ -56,7 +73,7 @@ const setSideBoardValue =()=>{
        }
     </div>
     <aside className="sideboard" style={sideboard? {transform:"translateX(0%)", width:"15rem", transition:"all 0.5s"} : 
-    {transform: "translateX(100%)", width:"15rem", transition:"all 2s"}}>
+    {transform: "translateX(100%)", width:"15rem", transition:"all 2s", zIndex:"2"}}>
         <div className="sideboard-heading">Relative Distances</div>
         <article>
             <strong>A to B</strong>
@@ -96,7 +113,7 @@ const setSideBoardValue =()=>{
             <div>Distance on Y-Axis: {CToD.y}</div>
         </article><br/>
         <div className="credit">
-        House Vectors by <a href="https://www.vecteezy.com/free-vector/house"><em>Vecteezy</em></a>
+        Houses and Cars Vectors by <a href="https://www.vecteezy.com/free-vector/house"><em>Vecteezy</em></a>
         <br/>
         Designed by <a href="https://www.smartegbuchulem.co"><em>Smart Egbuchulem</em></a>
         </div>

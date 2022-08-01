@@ -5,10 +5,11 @@ import { UseAppContext } from "../../context"
 
 export const Object4 = ()=>{    
     const {options4Value4,setOptions4Value4, setToken4XPos,
-         setToken4YPos, 
-         AToD, BToD, CToD,  moveXBy4, moveYBy4,  checkDistanceAToB, checkDistanceAToC
+         setToken4YPos, setItemMoved,
+         AToD, BToD, CToD,  moveXBy4, moveYBy4,  
+         checkDistanceAToB, checkDistanceAToC
         , checkDistanceAToD, checkDistanceBToC, checkDistanceBToD, checkDistanceCToD,
-        started4, setStarted4} = UseAppContext()
+        started4, setStarted4, dResidents} = UseAppContext()
     const [objMoveXBy4, setObjMoveXBy4] = useState(0);
     const [objMoveYBy4, setObjMoveYBy4] = useState(0);
     const[moveAction4, setMoveAction4] = useState(false)
@@ -23,6 +24,7 @@ export const Object4 = ()=>{
         setObjMoveYBy4(moveYBy4)
         setMoveToken4(true) // object to be dropped
         setStarted4(true)
+        setItemMoved()
     }
 
     const setMotionObject4 = (objectID)=>{
@@ -61,11 +63,12 @@ export const Object4 = ()=>{
             <button 
             onClick={()=>setMotionObject4("token4")}
              disabled={disableBtn4}
-              className="move-btn">Move</button>
+              className="move-btn">Drive</button>
             <button className="cancel-btn">Cancel</button>
             <div>{AToD.main} from A</div>
             <div>{BToD.main} from B</div>
             <div>{CToD.main} from C</div>
+            <div>Residents in D: {dResidents.length}</div>
         </div>
         }
         </div>
@@ -74,7 +77,7 @@ export const Object4 = ()=>{
         // show box options nesr cursor when moveAction id true
         style={moveAction4 && !noDrop4 ? {transform:`translate(${moveXBy4}px, ${moveYBy4}px)`, zIndex:"10", display:"block"} : 
         {transform :`translate(${moveXBy4}px, ${moveYBy4}px)`, zIndex:"-10", display:"none"}}  >
-            <button onClick={()=>setDropAction4(true)} disabled={!moveAction4} className="drop-btn">Drop</button>
+            <button onClick={()=>setDropAction4(true)} disabled={!moveAction4} className="drop-btn">Park</button>
         </div>}
         </>
 

@@ -5,11 +5,11 @@ import { UseAppContext } from "../../context"
 
 export const Object1 = ()=>{
     const {options1Value1,setOptions1Value1, setToken1XPos,
-         setToken1YPos, 
+         setToken1YPos, setItemMoved,
         AToB, AToC, AToD, moveXBy1, moveYBy1, 
         checkDistanceAToB, checkDistanceAToC, checkDistanceAToD, 
         checkDistanceBToC, checkDistanceBToD, checkDistanceCToD,
-        started1, setStarted1} = UseAppContext()
+        started1, setStarted1, aResidents} = UseAppContext()
     const [objMoveXBy1, setObjMoveXBy1] = useState(0);
     const [objMoveYBy1, setObjMoveYBy1] = useState(0);
      const[moveAction1, setMoveAction1] = useState(false)
@@ -24,6 +24,7 @@ const [moveToken1, setMoveToken1] = useState(false)
         setObjMoveYBy1(moveYBy1)
         setStarted1(true)
         setMoveToken1(true) // object to be dropped
+        setItemMoved()
     }
 
     const setMotionObject1 = (objectID)=>{
@@ -64,11 +65,12 @@ const [moveToken1, setMoveToken1] = useState(false)
             <button 
             onClick={()=>setMotionObject1("token1")}
              disabled={disableBtn1}
-              className="move-btn">Move</button>
+              className="move-btn">Drive</button>
             <button className="cancel-btn">Cancel</button>
             <div>{AToB.main} from B</div>
             <div>{AToC.main} from C</div>
             <div>{AToD.main} from D</div>
+            <div>Residents in A: {aResidents.length}</div>
         </div>
         }
         </div>
@@ -76,7 +78,7 @@ const [moveToken1, setMoveToken1] = useState(false)
         {<div className="board-options1" 
     style={moveAction1 && !noDrop1 ? {transform:`translate(${moveXBy1}px, ${moveYBy1}px)`, zIndex:"10", display:"block"} : 
         {transform :`translate(${moveXBy1}px, ${moveYBy1}px)`, zIndex:"-10", display:"none"}}  >
-            <button onClick={()=>setDropAction1(true)} disabled={!moveAction1} className="drop-btn">Drop</button>
+            <button onClick={()=>setDropAction1(true)} disabled={!moveAction1} className="drop-btn">Park</button>
         </div>} 
     </>
 

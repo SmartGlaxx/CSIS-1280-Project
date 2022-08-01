@@ -33,6 +33,11 @@ const SET_STARTED_1 = "SET_STARTED_1"
 const SET_STARTED_2 = "SET_STARTED_2"
 const SET_STARTED_3 = "SET_STARTED_3"
 const SET_STARTED_4 = "SET_STARTED_4"
+const SET_ALL_A_RESIDENTS  = "SET_ALL_A_RESIDENTS"
+const SET_ALL_B_RESIDENTS  = "SET_ALL_B_RESIDENTS"
+const SET_ALL_C_RESIDENTS  = "SET_ALL_C_RESIDENTS"
+const SET_ALL_D_RESIDENTS  = "SET_ALL_D_RESIDENTS"
+const ITEM_MOVED = "ITEM_MOVED"
 
 const initialState ={
     options1Value1: false,
@@ -67,7 +72,13 @@ const initialState ={
     started3 : false,
     started4 : false,
     start : false,
-    backgroundC: "#0f0"
+    backgroundC: "#0f0",
+    itemMoved: false,
+
+    aResidents : [],
+    bResidents : [],
+    cResidents : [],
+    dResidents : [],
 }
 export const AppProvider = ({children})=>{
     const [state, dispatch] = useReducer(reducer, initialState)
@@ -208,8 +219,48 @@ export const AppProvider = ({children})=>{
     const setStarted4 = (value)=>{
         dispatch({type: SET_STARTED_4, payload: value})
     }
+
+    const setItemMoved=(value)=>{
+        dispatch({type: "ITEM_MOVED", payload: value})
+    }
+
+
+    const setAResidents = (value)=>{
+        if(state.aResidents.includes(value)){
+            return;
+        }else{
+            dispatch({type: SET_ALL_A_RESIDENTS, payload: value})
+        }
+    }
+
+    const setBResidents = (value)=>{
+        if(state.bResidents.includes(value)){
+            return;
+        }else{
+            dispatch({type: SET_ALL_B_RESIDENTS, payload: value})
+        }
+    }
+
+
+    const setCResidents = (value)=>{
+        if(state.cResidents.includes(value)){
+            return;
+        }else{
+            dispatch({type: SET_ALL_C_RESIDENTS, payload: value})
+        }
+    }
+
+    const setDResidents = (value)=>{
+        if(state.dResidents.includes(value)){
+            return;
+        }else{
+            dispatch({type: SET_ALL_D_RESIDENTS, payload:  value})
+        }
+    }
+
+
     return <AppContext.Provider value={{
-        ...state, setOptions1Value1, setOptions2Value2, setOptions3Value3, setOptions4Value4, 
+        ...state, setItemMoved, setOptions1Value1, setOptions2Value2, setOptions3Value3, setOptions4Value4, 
         setToken1XPos, setToken1YPos, setToken2XPos, setToken2YPos,
         setToken3XPos, setToken3YPos, setToken4XPos, setToken4YPos,
         setMoveXBy1, setMoveYBy1, setMoveXBy2, setMoveYBy2, 
@@ -217,6 +268,7 @@ export const AppProvider = ({children})=>{
         checkDistanceAToB, checkDistanceAToC, checkDistanceAToD, 
         checkDistanceBToC, checkDistanceBToD, checkDistanceCToD, setStart,
         setSideBoard, setStarted1, setStarted2, setStarted3, setStarted4, 
+        setAResidents, setBResidents, setCResidents, setDResidents,
     }}>
     {children}
     </AppContext.Provider>
