@@ -13,6 +13,14 @@ h3{
     place-items: center;
 }
 
+.loading-board{
+    height:100vh;
+    width:100vw;
+    background: linear-gradient(to bottom,blue, white);
+    opacity: 0.9;
+    display: grid;
+    place-items: center;
+}
 .cellBoard{
     background: linear-gradient(to top, rgba(34,34,34, 0.97), rgba(34,34,51, 0.9)), url("../../assets/bg.png");
     background-position: center;

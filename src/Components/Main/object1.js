@@ -70,7 +70,7 @@ const [moveToken1, setMoveToken1] = useState(false)
             <div>{AToB.main} from B</div>
             <div>{AToC.main} from C</div>
             <div>{AToD.main} from D</div>
-            <div>Residents in A: {aResidents.length}</div>
+            <div>Serving {aResidents.length} houses</div>
         </div>
         }
         </div>

@@ -33,10 +33,13 @@ const SET_STARTED_1 = "SET_STARTED_1"
 const SET_STARTED_2 = "SET_STARTED_2"
 const SET_STARTED_3 = "SET_STARTED_3"
 const SET_STARTED_4 = "SET_STARTED_4"
-const SET_ALL_A_RESIDENTS  = "SET_ALL_A_RESIDENTS"
-const SET_ALL_B_RESIDENTS  = "SET_ALL_B_RESIDENTS"
-const SET_ALL_C_RESIDENTS  = "SET_ALL_C_RESIDENTS"
-const SET_ALL_D_RESIDENTS  = "SET_ALL_D_RESIDENTS"
+
+const SET_A_RESIDENTS  = "SET_A_RESIDENTS"
+const SET_B_RESIDENTS  = "SET_B_RESIDENTS"
+const SET_C_RESIDENTS  = "SET_C_RESIDENTS"
+const SET_D_RESIDENTS  = "SET_D_RESIDENTS"
+const SETLOADING = "SETLOADING"
+
 const ITEM_MOVED = "ITEM_MOVED"
 
 const reducer =(state, action)=>{
@@ -149,73 +152,43 @@ const reducer =(state, action)=>{
     case ITEM_MOVED:
         return {...state, itemMoved: !state.itemMoved}
     
-    case SET_ALL_A_RESIDENTS:
-        !state.aResidents.includes(action.payload) && state.aResidents.push(action.payload)
-        state.bResidents.includes(action.payload) && state.bResidents.pop(action.payload)
-        state.cResidents.includes(action.payload) && state.cResidents.pop(action.payload)
-        state.dResidents.includes(action.payload) && state.dResidents.pop(action.payload)
+
+    case SET_A_RESIDENTS:
+        !(state.aResidents.includes(action.payload)) && state.aResidents.push(action.payload)
+        state.bResidents = state.bResidents.filter(item => item!= action.payload)
+        state.cResidents = state.cResidents.filter(item => item!= action.payload)
+        state.dResidents = state.dResidents.filter(item => item!= action.payload)
         return {...state, aResidents : state.aResidents, bResidents : state.bResidents,
             cResidents : state.cResidents, dResidents : state.dResidents}
 
-    case SET_ALL_B_RESIDENTS:
-        state.aResidents.includes(action.payload) && state.aResidents.pop(action.payload)
-        !state.bResidents.includes(action.payload) && state.bResidents.push(action.payload)
-        state.cResidents.includes(action.payload) && state.cResidents.pop(action.payload)
-        state.dResidents.includes(action.payload) && state.dResidents.pop(action.payload)
-          return {...state, aResidents : state.aResidents, bResidents : state.bResidents,
+    case SET_B_RESIDENTS:
+        state.aResidents = state.aResidents.filter(item => item!= action.payload)
+        !(state.bResidents.includes(action.payload)) && state.bResidents.push(action.payload)
+        state.cResidents = state.cResidents.filter(item => item!= action.payload)
+        state.dResidents = state.dResidents.filter(item => item!= action.payload)
+            return {...state, aResidents : state.aResidents, bResidents : state.bResidents,
             cResidents : state.cResidents, dResidents : state.dResidents}
 
-    case SET_ALL_C_RESIDENTS:
-        state.aResidents.includes(action.payload) && state.aResidents.pop(action.payload)
-        state.bResidents.includes(action.payload) && state.bResidents.pop(action.payload)
-        !state.cResidents.includes(action.payload) && state.cResidents.push(action.payload)
-        state.dResidents.includes(action.payload) && state.dResidents.pop(action.payload)
-          return {...state, aResidents : state.aResidents, bResidents : state.bResidents,
+    case SET_C_RESIDENTS:
+        state.aResidents = state.aResidents.filter(item => item!= action.payload)
+        state.bResidents = state.bResidents.filter(item => item!= action.payload)
+        !(state.cResidents.includes(action.payload)) && state.cResidents.push(action.payload)
+        state.dResidents = state.dResidents.filter(item => item!= action.payload)
+            return {...state, aResidents : state.aResidents, bResidents : state.bResidents,
             cResidents : state.cResidents, dResidents : state.dResidents}
 
-    case SET_ALL_D_RESIDENTS:
-        state.aResidents.includes(action.payload) && state.aResidents.pop(action.payload)
-        state.bResidents.includes(action.payload) && state.bResidents.pop(action.payload)
-        state.cResidents.includes(action.payload) && state.cResidents.pop(action.payload)
-        !state.dResidents.includes(action.payload) && state.dResidents.push(action.payload)
-          return {...state, aResidents : state.aResidents, bResidents : state.bResidents,
+    case SET_D_RESIDENTS:
+        state.aResidents = state.aResidents.filter(item => item!= action.payload)
+        state.bResidents = state.bResidents.filter(item => item!= action.payload)
+        state.cResidents = state.cResidents.filter(item => item!= action.payload)
+        !(state.dResidents.includes(action.payload)) && state.dResidents.push(action.payload)
+            return {...state, aResidents : state.aResidents, bResidents : state.bResidents,
             cResidents : state.cResidents, dResidents : state.dResidents}
 
 
+    case SETLOADING:
+        return{...state, loading: action.payload}
 
-    case SET_ALL_A_RESIDENTS:
-        !state.aResidents.includes(action.payload) && state.aResidents.push(action.payload)
-        state.bResidents.includes(action.payload) && state.bResidents.pop(action.payload)
-        state.cResidents.includes(action.payload) && state.cResidents.pop(action.payload)
-        state.dResidents.includes(action.payload) && state.dResidents.pop(action.payload)
-        return {...state, aResidents : state.aResidents, bResidents : state.bResidents,
-            cResidents : state.cResidents, dResidents : state.dResidents}
-    
-    case SET_ALL_B_RESIDENTS:
-        state.aResidents.includes(action.payload) && state.aResidents.pop(action.payload)
-        !state.bResidents.includes(action.payload) && state.bResidents.push(action.payload)
-        state.cResidents.includes(action.payload) && state.cResidents.pop(action.payload)
-        state.dResidents.includes(action.payload) && state.dResidents.pop(action.payload)
-        return {...state, aResidents : state.aResidents, bResidents : state.bResidents,
-            cResidents : state.cResidents, dResidents : state.dResidents}
-
-    case SET_ALL_C_RESIDENTS:
-        state.aResidents.includes(action.payload) && state.aResidents.pop(action.payload)
-        state.bResidents.includes(action.payload) && state.bResidents.pop(action.payload)
-        !state.cResidents.includes(action.payload) && state.cResidents.push(action.payload)
-        state.dResidents.includes(action.payload) && state.dResidents.pop(action.payload)
-        return {...state, aResidents : state.aResidents, bResidents : state.bResidents,
-            cResidents : state.cResidents, dResidents : state.dResidents}
-
-    case SET_ALL_D_RESIDENTS:
-        state.aResidents.includes(action.payload) && state.aResidents.pop(action.payload)
-        state.bResidents.includes(action.payload) && state.bResidents.pop(action.payload)
-        state.cResidents.includes(action.payload) && state.cResidents.pop(action.payload)
-        !state.dResidents.includes(action.payload) && state.dResidents.push(action.payload)
-        return {...state, aResidents : state.aResidents, bResidents : state.bResidents,
-            cResidents : state.cResidents, dResidents : state.dResidents} 
-                
-        
     default :
         return {...state}
     }

@@ -5,25 +5,32 @@ import { Object2 } from "./object2";
 import { Object3 } from "./object3";
 import { Object4 } from "./object4";
 import { House1, House2, House3, House4, House5, House6, House7, House8, House9, House10,
-    House11, House12, House13, House14, House15, House16, House17, House18, House19, House20, 
-     House21, House22, House23, House24, House25
+    // House11, House12, House13, House14, House15, House16, House17, House18, House19, House20, 
+    //  House21, House22, House23, House24, House25
     } from "./houses";
 import { UseAppContext } from "../../context";
 import CellBlock from "./cellBlock";
 import { FaBars, FaRegWindowClose, FaPowerOff } from "react-icons/fa";
 import { MdOutlineMenu, MdPowerSettingsNew, MdOutlineClose } from "react-icons/md";
+import LoadingIcons from 'react-loading-icons'
+
 
 const Main = ()=>{
-    const {checkDistanceAToB,checkDistanceAToC, checkDistanceAToD, checkDistanceBToC, checkDistanceBToD, checkDistanceCToD,
-        AToB, AToC, AToD, BToC, BToD, CToD,
-        setMoveXBy1, setMoveYBy1, setMoveXBy2, setMoveYBy2, 
-        setMoveXBy3, setMoveYBy3, setMoveXBy4, setMoveYBy4, 
+    const {AToB, AToC, AToD, BToC, BToD, CToD, loading, setLoading,
         sideboard, setSideBoard,start, setStart} = UseAppContext()
-   
 
 
 const setSideBoardValue =()=>{
     setSideBoard(!sideboard)
+}
+
+setTimeout(() => {
+    setLoading(false)
+}, 2000);
+
+if(loading){
+    return <div className="loading-board">
+        <LoadingIcons.BallTriangle /></div>
 }
 
     return <div className='cellBoard'>
@@ -42,7 +49,7 @@ const setSideBoardValue =()=>{
         <House8 />
         <House9 />
         <House10 />
-        <House11 />
+        {/* <House11 />
         <House12 />
         <House13 />
         <House14 />
@@ -56,7 +63,7 @@ const setSideBoardValue =()=>{
         <House22 />
         <House23 />
         <House24 />
-        <House25 />
+        <House25 /> */}
     <div className="menu-btn" onClick={setSideBoardValue} >
         {sideboard ? 
         <MdOutlineClose className="menu-icon2" /> :

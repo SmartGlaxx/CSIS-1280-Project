@@ -57,7 +57,7 @@ export const CellData = ({id})=>{
     }, [AToB, AToC, AToD, BToC, BToD, CToD])
     
     return <div id={`elem-${id}`} 
-        style={{background: start && elementBackground, color:"transparent", opacity:"0.07"}}
+        style={{background: start && elementBackground, color:"transparent", opacity:"0.4"}}
         > 
         -     
     </div>

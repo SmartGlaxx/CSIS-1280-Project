@@ -37,9 +37,17 @@ const SET_ALL_A_RESIDENTS  = "SET_ALL_A_RESIDENTS"
 const SET_ALL_B_RESIDENTS  = "SET_ALL_B_RESIDENTS"
 const SET_ALL_C_RESIDENTS  = "SET_ALL_C_RESIDENTS"
 const SET_ALL_D_RESIDENTS  = "SET_ALL_D_RESIDENTS"
+
+const SET_A_RESIDENTS  = "SET_A_RESIDENTS"
+const SET_B_RESIDENTS  = "SET_B_RESIDENTS"
+const SET_C_RESIDENTS  = "SET_C_RESIDENTS"
+const SET_D_RESIDENTS  = "SET_D_RESIDENTS"
+const SETLOADING = "SETLOADING"
+
 const ITEM_MOVED = "ITEM_MOVED"
 
 const initialState ={
+    loading: true,
     options1Value1: false,
     token1XPos : 0,
     token1YPos : 0,
@@ -225,11 +233,12 @@ export const AppProvider = ({children})=>{
     }
 
 
+
     const setAResidents = (value)=>{
         if(state.aResidents.includes(value)){
             return;
         }else{
-            dispatch({type: SET_ALL_A_RESIDENTS, payload: value})
+            dispatch({type: SET_A_RESIDENTS, payload: value})
         }
     }
 
@@ -237,7 +246,7 @@ export const AppProvider = ({children})=>{
         if(state.bResidents.includes(value)){
             return;
         }else{
-            dispatch({type: SET_ALL_B_RESIDENTS, payload: value})
+            dispatch({type: SET_B_RESIDENTS, payload: value})
         }
     }
 
@@ -246,7 +255,7 @@ export const AppProvider = ({children})=>{
         if(state.cResidents.includes(value)){
             return;
         }else{
-            dispatch({type: SET_ALL_C_RESIDENTS, payload: value})
+            dispatch({type: SET_C_RESIDENTS, payload: value})
         }
     }
 
@@ -254,10 +263,13 @@ export const AppProvider = ({children})=>{
         if(state.dResidents.includes(value)){
             return;
         }else{
-            dispatch({type: SET_ALL_D_RESIDENTS, payload:  value})
+            dispatch({type: SET_D_RESIDENTS, payload:  value})
         }
     }
 
+    const setLoading = (value)=>{
+        dispatch({type: SETLOADING, payload: value})
+    }
 
     return <AppContext.Provider value={{
         ...state, setItemMoved, setOptions1Value1, setOptions2Value2, setOptions3Value3, setOptions4Value4, 
@@ -269,6 +281,7 @@ export const AppProvider = ({children})=>{
         checkDistanceBToC, checkDistanceBToD, checkDistanceCToD, setStart,
         setSideBoard, setStarted1, setStarted2, setStarted3, setStarted4, 
         setAResidents, setBResidents, setCResidents, setDResidents,
+        setLoading
     }}>
     {children}
     </AppContext.Provider>

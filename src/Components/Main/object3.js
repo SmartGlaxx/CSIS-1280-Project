@@ -70,7 +70,7 @@ export const Object3 = ()=>{
             <div>{AToC.main} from A</div>
             <div>{BToC.main} from B</div>
             <div>{CToD.main} from D</div>
-            <div>Residents in C: {cResidents.length}</div>
+            <div>Serving {cResidents.length} houses</div>
         </div>
         }
         </div>
