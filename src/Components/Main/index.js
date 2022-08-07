@@ -30,7 +30,11 @@ setTimeout(() => {
 
 if(loading){
     return <div className="loading-board">
-        <LoadingIcons.BallTriangle /></div>
+        <div>
+            <div className="loader-inner1"><div className='header'>Residence Service</div>Calculator</div>
+            <div className="loader-inner2"><LoadingIcons.BallTriangle /></div>
+        </div>
+        </div>
 }
 
     return <div className='cellBoard'>
@@ -66,16 +70,21 @@ if(loading){
         <House25 /> */}
     <div className="menu-btn" onClick={setSideBoardValue} >
         {sideboard ? 
-        <MdOutlineClose className="menu-icon2" /> :
+        <div className="menu-btn-box">
+        <MdOutlineClose className="menu-icon2" /> </div>:
+        <div  className="menu-btn-box">
         <MdOutlineMenu className="menu-icon1"/>
+        </div>
         }
     </div>
     <div className="toggle-btn" onClick={()=>setStart(!start)} >
        {!sideboard && 
        <>
         {start ?
-        <MdPowerSettingsNew className="toggle-icon1"/> :
-        <MdPowerSettingsNew className="toggle-icon2"/>}
+        <div  className="menu-btn-box">
+        <MdPowerSettingsNew className="toggle-icon1"/></div> :
+        <div  className="menu-btn-box">
+        <MdPowerSettingsNew className="toggle-icon2"/></div>}
       </>
        }
     </div>
@@ -124,11 +133,6 @@ if(loading){
         <br/>
         Designed by <a href="https://www.smartegbuchulem.co"><em>Smart Egbuchulem</em></a>
         </div>
-    {/* <button 
-    style={{position:"absolute"}} className="toggle-regions"
-     onClick={()=>setStart(!start)}
-     >{start ? `Hide Regions`: `Show Regions`}
-     </button> */}
     </aside>
     <div className="footer"></div>
     </div>

@@ -61,7 +61,7 @@ export const Object3 = ()=>{
             <img src={Token3} alt="token3" className="token-pic-3"/>
             {/* when clicked show this list of object 3 obtions */}
         { options3Value3 && <div className={started3 ? `select-option-AB`: `select-option-CD`} > 
-            <h3>Token C</h3>
+            <h3>Vehicle C</h3>
             <button 
             onClick={()=>setMotionObject3("token3")}
              disabled={disableBtn3}
@@ -70,7 +70,7 @@ export const Object3 = ()=>{
             <div>{AToC.main} from A</div>
             <div>{BToC.main} from B</div>
             <div>{CToD.main} from D</div>
-            <div>Serving {cResidents.length} houses</div>
+            <div>Serving {cResidents.length} {cResidents.length > 1 ? ` houses` : ` house`}</div>
         </div>
         }
         </div>

@@ -61,7 +61,7 @@ const [moveToken1, setMoveToken1] = useState(false)
             <img src={Token1} alt="token1" className="token-pic-1"/>
             {/* when clicked show this list of object 1 obtions */}
         { options1Value1 && <div className="select-option-AB" > 
-            <h3>Token A</h3>
+            <h3>Vehicle A</h3>
             <button 
             onClick={()=>setMotionObject1("token1")}
              disabled={disableBtn1}
@@ -70,7 +70,7 @@ const [moveToken1, setMoveToken1] = useState(false)
             <div>{AToB.main} from B</div>
             <div>{AToC.main} from C</div>
             <div>{AToD.main} from D</div>
-            <div>Serving {aResidents.length} houses</div>
+            <div>Serving {aResidents.length} {aResidents.length > 1 ? ` houses` : ` house`}</div>
         </div>
         }
         </div>

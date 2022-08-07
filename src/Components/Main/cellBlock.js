@@ -41,7 +41,7 @@ const CellBlock = ()=>{
   
     return <>
      <div className="background">
-        CSIS-1280
+     Residence Service Calculator
     </div>
     <div className='cellBoard'>
     {
