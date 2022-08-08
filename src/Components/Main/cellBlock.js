@@ -40,9 +40,9 @@ const CellBlock = ()=>{
 
   
     return <>
-     <div className="background">
+     {/* <div className="background">
      Residence Service Calculator
-    </div>
+    </div> */}
     <div className='cellBoard'>
     {
         CellList.map((item,i) =>{
