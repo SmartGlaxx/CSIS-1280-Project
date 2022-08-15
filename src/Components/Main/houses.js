@@ -35,8 +35,8 @@ export const House1=()=>{
         itemMoved, setLoading
      } = UseAppContext()
     
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth - 50;
+    const windowHeight = window.innerHeight - 50;
     const [pos1X, setpos1X] = useState(0);
     const [pos1Y, setpos1Y] = useState(0);
     setTimeout(() => {
@@ -99,8 +99,8 @@ export const House2=()=>{
         itemMoved, setLoading
      } = UseAppContext()
      
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth - 50;
+    const windowHeight = window.innerHeight - 50;
     const [pos2X, setpos2X] = useState(0);
     const [pos2Y, setpos2Y] = useState(0);
     setTimeout(() => {
@@ -161,8 +161,8 @@ export const House3=()=>{
         itemMoved, setLoading
      } = UseAppContext()
     
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth - 50;
+    const windowHeight = window.innerHeight - 50;
     const [pos3X, setpos3X] = useState(0);
     const [pos3Y, setpos3Y] = useState(0);
     setTimeout(() => {
@@ -222,8 +222,8 @@ export const House4=()=>{
         itemMoved, setLoading
      } = UseAppContext()
     
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth - 50;
+    const windowHeight = window.innerHeight - 50;
     const [pos4X, setpos4X] = useState(0);
     const [pos4Y, setpos4Y] = useState(0);
     setTimeout(() => {
@@ -285,8 +285,8 @@ export const House5=()=>{
         itemMoved, setLoading
      } = UseAppContext()
     
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth - 50;
+    const windowHeight = window.innerHeight - 50;
     const [pos5X, setpos5X] = useState(0);
     const [pos5Y, setpos5Y] = useState(0);
     setTimeout(() => {
@@ -348,8 +348,8 @@ export const House6=()=>{
         itemMoved, setLoading
      } = UseAppContext()
      
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth - 50;
+    const windowHeight = window.innerHeight - 50;
     const [pos6X, setpos6X] = useState(0);
     const [pos6Y, setpos6Y] = useState(0);
     setTimeout(() => {
@@ -410,8 +410,8 @@ export const House7=()=>{
         itemMoved, setLoading
      } = UseAppContext()
     
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth - 50;
+    const windowHeight = window.innerHeight - 50;
     const [pos7X, setpos7X] = useState(0);
     const [pos7Y, setpos7Y] = useState(0);
     setTimeout(() => {
@@ -473,8 +473,8 @@ export const House8=()=>{
         itemMoved, setLoading
      } = UseAppContext()
     
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth - 50;
+    const windowHeight = window.innerHeight - 50;
     const [pos8X, setpos8X] = useState(0);
     const [pos8Y, setpos8Y] = useState(0);
     setTimeout(() => {
@@ -537,8 +537,8 @@ export const House9=()=>{
         itemMoved, setLoading
      } = UseAppContext()
      
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth - 50;
+    const windowHeight = window.innerHeight - 50;
     const [pos9X, setpos9X] = useState(0);
     const [pos9Y, setpos9Y] = useState(0);
     setTimeout(() => {
@@ -600,8 +600,8 @@ export const House10=()=>{
         itemMoved, setLoading
      } = UseAppContext()
     
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth - 50;
+    const windowHeight = window.innerHeight - 50;
     const [pos10X, setpos10X] = useState(0);
     const [pos10Y, setpos10Y] = useState(0);
     setTimeout(() => {
@@ -662,8 +662,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -722,8 +722,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -781,8 +781,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -841,8 +841,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -900,8 +900,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -959,8 +959,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -1019,8 +1019,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -1078,8 +1078,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -1137,8 +1137,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -1197,8 +1197,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -1256,8 +1256,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -1315,8 +1315,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -1374,8 +1374,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -1434,8 +1434,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
@@ -1493,8 +1493,8 @@ export const House10=()=>{
 //         setAResidents, setBResidents, setCResidents, setDResidents,
 //         itemMoved
 //      } = UseAppContext()
-//     const windowWidth = window.innerWidth;
-//     const windowHeight = window.innerHeight;
+//     const windowWidth = window.innerWidth - 50;
+//     const windowHeight = window.innerHeight - 50;
 //     const [posX, setposX] = useState(0);
 //     const [posY, setposY] = useState(0);
 //     const distXFromA = Math.abs(token1XPos - posX);
